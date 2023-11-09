@@ -1,0 +1,31 @@
+---
+import "~/styles/globals.css";
+
+import { klass } from "@klass/core";
+
+const kripika = klass({
+  base: "font-bold text-5xl md:text-7xl xl:text-9xl text-center select-none",
+  variants: {
+    color: {
+      neutral: "text-neutral-9",
+      primary: "text-primary-9",
+    },
+  },
+});
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Kripika</title>
+  </head>
+  <body>
+    <main class="flex items-center justify-center container mx-auto h-screen">
+      <div>
+        <h1 class={kripika({ color: "primary" })}>Kripika</h1>
+      </div>
+    </main>
+  </body>
+</html>
