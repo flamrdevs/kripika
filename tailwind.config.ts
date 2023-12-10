@@ -1,6 +1,9 @@
+import defaultTheme from "tailwindcss/defaultTheme";
 import type { Config } from "tailwindcss";
 
 import coloradix, { gray, tomato } from "@coloradix/tailwindcss";
+
+import tailwindcssAspectRatio from "@tailwindcss/aspect-ratio";
 
 const radix = coloradix({
   gray,
@@ -17,7 +20,12 @@ export default {
   theme: {
     colors: {
       transparent: "transparent",
+      current: "currentColor",
       ...radix.colors,
+    },
+    fontFamily: {
+      sans: ["Inter Variable", ...defaultTheme.fontFamily.sans],
+      display: ["Titan One", ...defaultTheme.fontFamily.serif],
     },
     extend: {
       width: {
@@ -28,5 +36,5 @@ export default {
       },
     },
   },
-  plugins: [radix.plugin],
+  plugins: [radix.plugin, tailwindcssAspectRatio],
 } satisfies Config;

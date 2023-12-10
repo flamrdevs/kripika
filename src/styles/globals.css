@@ -1,3 +1,12 @@
 body {
-  @apply bg-neutral-1 text-neutral-12;
+  @apply bg-neutral-1 text-neutral-12 font-sans font-medium text-base;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
