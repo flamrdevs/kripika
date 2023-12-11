@@ -10,13 +10,14 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^4.0.3",
+    "astro": "^4.0.4",
     "motion": "^10.16.4"
   },
   "devDependencies": {
-    "@astrojs/check": "^0.3.1",
+    "@astrojs/check": "^0.3.2",
+    "@astrojs/sitemap": "^3.0.3",
     "@astrojs/tailwind": "^5.0.3",
-    "@coloradix/tailwindcss": "^2.3.0",
+    "@coloradix/tailwindcss": "^2.3.1",
     "@fontsource-variable/inter": "^5.0.16",
     "@fontsource/titan-one": "^5.0.18",
     "@tailwindcss/aspect-ratio": "^0.4.2",

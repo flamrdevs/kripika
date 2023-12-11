@@ -5,20 +5,37 @@ import "@fontsource/titan-one";
 import "~/styles/globals.css";
 
 import SVG from "~/components/SVG.astro";
+import { SITE } from "~/const";
+
+const title = "Kripika";
+const description = "Kripika";
+const url = SITE;
+const og = `${SITE}/og.png`;
 ---
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
     <meta name="viewport" content="width=device-width" />
-    <title>Kripika</title>
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={url} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={og} />
+
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={url} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={og} />
   </head>
   <body class="relative">
-    <div id="svg" class="z-0 fixed inset-0 opacity-20" style={{ transform: `scale(0.95)` }}>
-      <SVG class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200%] h-[200%] md:w-[150%] md:h-[150%]" />
-    </div>
-
     <section class="h-8"></section>
 
     <main class="relative z-10">
@@ -37,7 +54,7 @@ import SVG from "~/components/SVG.astro";
           class="relative w-auto h-auto aspect-w-3 aspect-h-5 select-none bg-neutral-1 border border-primary-9 rounded-3xl overflow-hidden shadow-xl"
           style={{ transform: `translateX(-20px) scale(0.96)` }}
         >
-          <img src="/type-1.webp" class="z-0 absolute inset-0" />
+          <img alt="type-1" src="/type-1.webp" class="z-0 absolute inset-0" />
           <div
             class="z-10 absolute inset-x-0 top-auto bottom-0 flex items-center justify-center h-1/6 bg-black-9 text-white border-t border-t-white-9 backdrop-blur"
           >
@@ -52,7 +69,7 @@ import SVG from "~/components/SVG.astro";
           class="relative w-auto h-auto aspect-w-3 aspect-h-5 select-none bg-neutral-1 border border-primary-9 rounded-3xl overflow-hidden shadow-xl"
           style={{ transform: `translateX(20px) scale(0.96)` }}
         >
-          <img src="/type-2.webp" class="z-0 absolute inset-0" />
+          <img alt="type-2" src="/type-2.webp" class="z-0 absolute inset-0" />
           <div
             class="z-10 absolute inset-x-0 top-auto bottom-0 flex items-center justify-center h-1/6 bg-black-9 text-white border-t border-t-white-9 backdrop-blur"
           >
@@ -82,6 +99,10 @@ import SVG from "~/components/SVG.astro";
     </main>
 
     <section class="h-8"></section>
+
+    <div id="svg" class="z-0 fixed inset-0 opacity-20" style={{ transform: `scale(0.95)` }}>
+      <SVG class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200%] h-[200%] md:w-[150%] md:h-[150%]" />
+    </div>
   </body>
 </html>
 
