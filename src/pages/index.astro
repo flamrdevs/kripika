@@ -48,34 +48,28 @@ const og = `${SITE}/og.png`;
           Kripika
         </h1>
       </section>
-      <section class="container mx-auto max-w-screen-md grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 p-8 sm:p-12">
+      <section class="container mx-auto max-w-[30rem] grid grid-cols-1 gap-6 sm:gap-8 p-8 sm:p-12">
         <div
           id="card-1"
-          class="relative w-auto h-auto aspect-w-3 aspect-h-5 select-none bg-neutral-1 border border-primary-9 rounded-3xl overflow-hidden shadow-xl"
+          class="relative w-auto h-auto aspect-w-3 aspect-h-4 select-none bg-neutral-1 border border-primary-9 rounded-3xl overflow-hidden shadow-xl"
           style={{ transform: `translateX(-20px) scale(0.96)` }}
         >
-          <img alt="type-1" src="/type-1.webp" class="z-0 absolute inset-0" />
-          <div
-            class="z-10 absolute inset-x-0 top-auto bottom-0 flex items-center justify-center h-1/6 bg-black-9 text-white border-t border-t-white-9 backdrop-blur"
-          >
-            <div>
-              <div class="mb-1 text-center font-bold text-xl md:text-2xl">Pentol</div>
-              <div class="text-center font-medium text-lg md:text-xl">Rp5000</div>
+          <div class="embla">
+            <div class="embla__container">
+              <div class="embla__slide">
+                <img alt="usus-1" src="/usus-1.webp" />
+              </div>
+              <div class="embla__slide">
+                <img alt="usus-2" src="/usus-2.webp" />
+              </div>
             </div>
           </div>
-        </div>
-        <div
-          id="card-2"
-          class="relative w-auto h-auto aspect-w-3 aspect-h-5 select-none bg-neutral-1 border border-primary-9 rounded-3xl overflow-hidden shadow-xl"
-          style={{ transform: `translateX(20px) scale(0.96)` }}
-        >
-          <img alt="type-2" src="/type-2.webp" class="z-0 absolute inset-0" />
           <div
             class="z-10 absolute inset-x-0 top-auto bottom-0 flex items-center justify-center h-1/6 bg-black-9 text-white border-t border-t-white-9 backdrop-blur"
           >
             <div>
-              <div class="mb-1 text-center font-bold text-xl md:text-2xl">Pentol</div>
-              <div class="text-center font-medium text-lg md:text-xl">Rp5000</div>
+              <div class="mb-1 text-center font-bold text-xl md:text-2xl">Usus</div>
+              <div class="text-center font-medium text-lg md:text-xl">Rp4000</div>
             </div>
           </div>
         </div>
@@ -106,8 +100,26 @@ const og = `${SITE}/og.png`;
   </body>
 </html>
 
+<style>
+  .embla {
+    @apply z-0 absolute inset-0 overflow-hidden;
+  }
+
+  .embla__container {
+    @apply flex items-stretch justify-between w-full h-full;
+  }
+
+  .embla__slide {
+    flex: 0 0 100%;
+    min-width: 0;
+  }
+</style>
+
 <script>
   import { animate, spring } from "motion";
+
+  import embla from "embla-carousel";
+  import autoplay from "embla-carousel-autoplay";
 
   animate(
     "#svg",
@@ -143,15 +155,5 @@ const og = `${SITE}/og.png`;
     }
   );
 
-  animate(
-    "#card-2",
-    {
-      scale: [0.96, 1],
-      x: [20, 0],
-    },
-    {
-      delay: 0.1,
-      easing: spring(),
-    }
-  );
+  embla(document.querySelector(".embla")! as HTMLElement, { loop: true }, [autoplay()]);
 </script>

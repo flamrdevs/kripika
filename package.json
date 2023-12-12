@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "astro": "^4.0.4",
+    "embla-carousel": "8.0.0-rc15",
+    "embla-carousel-autoplay": "8.0.0-rc15",
     "motion": "^10.16.4"
   },
   "devDependencies": {

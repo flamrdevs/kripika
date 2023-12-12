@@ -8,6 +8,12 @@ dependencies:
   astro:
     specifier: ^4.0.4
     version: 4.0.4(typescript@5.3.3)
+  embla-carousel:
+    specifier: 8.0.0-rc15
+    version: 8.0.0-rc15
+  embla-carousel-autoplay:
+    specifier: 8.0.0-rc15
+    version: 8.0.0-rc15(embla-carousel@8.0.0-rc15)
   motion:
     specifier: ^10.16.4
     version: 10.16.4
@@ -1462,6 +1468,18 @@ packages:
 
   /electron-to-chromium@1.4.610:
     resolution: {integrity: sha512-mqi2oL1mfeHYtOdCxbPQYV/PL7YrQlxbvFEZ0Ee8GbDdShimqt2/S6z2RWqysuvlwdOrQdqvE0KZrBTipAeJzg==}
+
+  /embla-carousel-autoplay@8.0.0-rc15(embla-carousel@8.0.0-rc15):
+    resolution: {integrity: sha512-ABTbDJGNb9jzI9OV2vSpbUvxUA0ELmK0SI3yPm8Haj3ghssS+vElfahoDqp7zuFkWBRih6w3B51oMPKdF5J55A==}
+    peerDependencies:
+      embla-carousel: 8.0.0-rc15
+    dependencies:
+      embla-carousel: 8.0.0-rc15
+    dev: false
+
+  /embla-carousel@8.0.0-rc15:
+    resolution: {integrity: sha512-s7VPexK2h8VEYjEVQFnJAPcRnY5YqJYicFxKVVyWXP3Hk9FFDkT0kqVxMM1PcL187qHOUgmGVHOrfC8xWy3OKQ==}
+    dev: false
 
   /emmet@2.4.6:
     resolution: {integrity: sha512-dJfbdY/hfeTyf/Ef7Y7ubLYzkBvPQ912wPaeVYpAxvFxkEBf/+hJu4H6vhAvFN6HlxqedlfVn2x1S44FfQ97pg==}
