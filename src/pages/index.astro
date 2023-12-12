@@ -54,7 +54,7 @@ const og = `${SITE}/og.png`;
           class="relative w-auto h-auto aspect-w-3 aspect-h-4 select-none bg-neutral-1 border border-primary-9 rounded-3xl overflow-hidden shadow-xl"
           style={{ transform: `translateX(-20px) scale(0.96)` }}
         >
-          <div class="embla">
+          <div class="embla embla-1">
             <div class="embla__container">
               <div class="embla__slide">
                 <img alt="usus-1" src="/usus-1.webp" />
@@ -78,10 +78,13 @@ const og = `${SITE}/og.png`;
           class="relative w-auto h-auto aspect-w-3 aspect-h-4 select-none bg-neutral-1 border border-primary-9 rounded-3xl overflow-hidden shadow-xl"
           style={{ transform: `translateX(-20px) scale(0.96)` }}
         >
-          <div class="embla">
+          <div class="embla embla-2">
             <div class="embla__container">
               <div class="embla__slide">
                 <img alt="basreng-1" src="/basreng-1.webp" />
+              </div>
+              <div class="embla__slide">
+                <img alt="basreng-2" src="/basreng-2.webp" />
               </div>
             </div>
           </div>
@@ -177,5 +180,7 @@ const og = `${SITE}/og.png`;
     }
   );
 
-  embla(document.querySelector(".embla")! as HTMLElement, { loop: true }, [autoplay()]);
+  ["1", "2"].forEach((item) => {
+    embla(document.querySelector(`.embla-${item}`)! as HTMLElement, { loop: true }, [autoplay()]);
+  });
 </script>
