@@ -94,7 +94,7 @@ const og = `${SITE}/og.png`;
 
     <section class="h-8"></section>
 
-    <div id="svg" class="z-0 fixed inset-0 opacity-20" style={{ transform: `scale(0.95)` }}>
+    <div class="z-0 fixed inset-0 opacity-20">
       <SVG class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200%] h-[200%] md:w-[150%] md:h-[150%]" />
     </div>
   </body>
@@ -120,17 +120,6 @@ const og = `${SITE}/og.png`;
 
   import embla from "embla-carousel";
   import autoplay from "embla-carousel-autoplay";
-
-  animate(
-    "#svg",
-    {
-      scale: [0.95, 1],
-    },
-    {
-      delay: 0.1,
-      easing: spring(),
-    }
-  );
 
   animate(
     "#kripika",
